@@ -43,7 +43,7 @@ const userController = {
 
             const randomString = crypto.randomUUID()
             const apiKey = `mern-$${existEmail._id}-$${existEmail.email}-$${randomString}`
-            const expiresAt = new Date(Date.now() + 60 * 60 * 1000) // 1 hour from now
+            const expiresAt = new Date(Date.now() + 60 * 60 * 1000)
 
             existEmail.apiKey = apiKey
             existEmail.apiKeyExpiresAt = expiresAt
